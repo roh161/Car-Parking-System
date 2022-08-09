@@ -1,0 +1,16 @@
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/3.0.0/gems/debug-1.6.1/ext/debug
+/usr/share/rvm/rubies/ruby-3.0.0/bin/ruby -I /usr/share/rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 extconf.rb
+creating Makefile
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/3.0.0/gems/debug-1.6.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20220803-5785-yuut4n sitelibdir\=./.gem.20220803-5785-yuut4n clean
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/3.0.0/gems/debug-1.6.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20220803-5785-yuut4n sitelibdir\=./.gem.20220803-5785-yuut4n
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/3.0.0/gems/debug-1.6.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20220803-5785-yuut4n sitelibdir\=./.gem.20220803-5785-yuut4n install
+/usr/bin/install -m 0755 debug.so ./.gem.20220803-5785-yuut4n/debug

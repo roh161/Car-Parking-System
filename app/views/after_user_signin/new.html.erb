@@ -1,0 +1,30 @@
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Car Parking Info</h3>
+
+            <div class="px-md-2">
+              <%= form_for @vehicle, url: "/after_user_signin", method: :post do |f| %>
+
+                <div class="form-outline mb-4">
+                    <%= f.text_field :number, class: "form-control", placeholder: "Number" %>
+                </div>
+                
+                <div class="form-outline mb-4">
+                    <%= f.text_field :car_model_name, class: "form-control", placeholder: "Car Model Name" %>
+                </div>
+                <%= f.submit "Submit", class:"btn btn-success btn-lg mb-1" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
