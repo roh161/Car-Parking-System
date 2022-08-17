@@ -1,25 +1,33 @@
-<h1 class="card-title text-right">Admin Panel</h1>
 
-<%# <%= link_to 'Add New User', after_admin_signin_path , class: "btn btn-primary text-light" %>
+<% if user_signed_in? %>
 
-<table class="table table-striped table-hover">
-    <thead class="table-dark">
-      <tr class="header">
-        <th>Users</th>
-		<th>Emails</th>
-        <th colspan="3">Action</th>
-      </tr>
-    </thead>
-		<% @user.each do |u| %>
-			<tr>
-				<td><%= u.name%></td>
-				<td><%= u.email%></td>
-				<td class="action">
-					<%= link_to "Car Details", after_admin_signin_path(u.id), class: "btn btn-sm btn-primary text-light"%>
-					<%= link_to "Remove User", after_admin_signin_path(u.id), class: "btn btn-sm btn-danger text-light", data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"}%>	
-				</td> 
-			</tr>
-		<%end%>
-</table>
+	<h3 class="card-title text-right mt-5">Total <%= @total_v%> vehicles are Parked by <%= @total_u%> Owners</h3>  
+
+	<%# <%= link_to 'Add New User', after_admin_signin_path , class: "btn btn-primary text-light" %>
+	
+	<table class="table table-striped table-hover">
+		<thead class="table-dark">
+		<tr class="header">
+			<th>All Users</th>
+			<th>Emails</th>
+			<th colspan="3">Action</th>
+		</tr>
+		</thead>
+			<% @user.each do |u| %>
+				<tr>
+					<td><%= u.name%></td>
+					<td><%= u.email%></td>
+					<td class="action">
+						<%= link_to "See Details", after_admin_signin_path(u.id), class: "btn btn-sm btn-primary text-light"%>
+						<%= link_to "Remove User", after_admin_signin_path(u.id), class: "btn btn-sm btn-danger text-light", data: {
+						turbo_method: :delete,
+						turbo_confirm: "Are you sure?"}%>	
+					</td> 
+				</tr>
+			<%end%>
+	</table>
+<% else %>
+	<%= render "shared/header" %>
+	<h2>Welcome to Our 24*7 Service</h2>
+	<h4 class= "text-success">Thanks for Choosing Us</h4>
+<% end %>

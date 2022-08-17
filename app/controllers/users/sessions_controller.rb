@@ -22,10 +22,9 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def after_sign_in_path_for(resource)
-    @user = current_user  
-    if @user.user_type.upcase=="ADMIN"  
+    if current_user.user_type.upcase=="ADMIN"  
       after_admin_signin_index_path
-    else @user.user_type.upcase=="USER"
+    else current_user.user_type.upcase=="USER"
       after_user_signin_index_path
     end
   end

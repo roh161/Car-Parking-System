@@ -2,6 +2,18 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style> 
+    .inf-content{
+    border:1px solid #DDDDDD;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    }			                                                      
+
+    </style>   
 
     <style> 
     .inf-content{
@@ -39,7 +51,7 @@
                         <td>
                             <strong>
                                 <span class="glyphicon glyphicon-user  text-primary"></span>    
-                                Name                                                
+                                Owner                                                
                             </strong>
                         </td>
                         <td class="text-primary">
@@ -60,40 +72,17 @@
                     <tr>        
                         <td>
                             <strong>
-                                <span class="glyphicon glyphicon-plane text-primary"></span>
+                                <span class="fa fa-car text-primary"></span>
                                 Cars                                             
                             </strong>
                         </td>
                         <td class="text-primary">
-                            <%= @vehicle%>                                             
+                            <%= @vehicle%>
                         </td>
-                    </tr>    
-                    <tr>        
-                        <%# <td>
-                            <strong>
-                                <span class="glyphicon glyphicon-calendar text-primary"></span>
-                                created                                                
-                            </strong>
-                        </td> %>
-                        <%# <td class="text-primary">
-                            <%= @vehicle.created_at%>
-                        <%# </td> %>
-                    </tr>
-                    <tr>        
-                        <%# <td>
-                            <strong>
-                                <span class="glyphicon glyphicon-calendar text-primary"></span>
-                                Modified                                                
-                            </strong>
-                        </td> %>
-                        <%# <td class="text-primary">
-                            <%= @vehicle.updated_at%>
-                        <%# </td> %>
-                    </tr>
-
+                    </tr>                  
                 </tbody>
             </table>
-            </div>
+          </div>
         </div>
     </div>
 </div>

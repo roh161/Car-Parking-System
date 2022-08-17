@@ -12,6 +12,10 @@ class AfterUserSigninController < ApplicationController
   end
 
 
+  def car_details
+    @vehicle = @user.vehicles.find(params[:id])
+  end
+
   def new
     @vehicle = current_user.vehicles.new
   end
@@ -21,7 +25,7 @@ class AfterUserSigninController < ApplicationController
     if @vehicle.save
       redirect_to after_user_signin_index_path
     else
-      render 'new'
+      render 'new'   
     end
   end
 

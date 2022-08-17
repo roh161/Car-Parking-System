@@ -8,16 +8,13 @@
             alt="Sample photo">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Car Parking Info</h3>
-
             <div class="px-md-2">
-              <%= form_for @vehicle, url: "/after_user_signin", method: :post do |f| %>
-
+              <%= form_for @vehicle, url: "/after_user_signin", method: :post do |f| %> 
                 <div class="form-outline mb-4">
-                    <%= f.text_field :number, class: "form-control", placeholder: "Number" %>
-                </div>
-                
+                  <%= f.text_field :number, class: "form-control", placeholder: "Number"%>
+                </div>               
                 <div class="form-outline mb-4">
-                    <%= f.text_field :car_model_name, class: "form-control", placeholder: "Car Model Name" %>
+                  <%= f.text_field :car_model_name, class: "form-control", placeholder: "Car Model Name" %>
                 </div>
                 <%= f.submit "Submit", class:"btn btn-success btn-lg mb-1" %>
               <% end %>

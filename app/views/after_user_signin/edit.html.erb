@@ -7,7 +7,7 @@
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
             alt="Sample photo">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Edit Info</h3>
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Update Info</h3>
 
             <div class="px-md-2">
               <%= form_for @vehicle, url: after_user_signin_path(@vehicle), :method => 'patch' do |f| %>
@@ -19,7 +19,7 @@
                 <div class="form-outline mb-4">
                     <%= f.text_field :car_model_name, class: "form-control", placeholder: "Car Model Name" %>
                 </div>
-                <%= f.submit "Edit", class:"btn btn-success btn-lg mb-1" %>
+                <%= f.submit "Update", class:"btn btn-success btn-lg mb-1" %>
               <% end %>
             </div>
           </div>

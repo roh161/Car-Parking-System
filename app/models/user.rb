@@ -17,7 +17,9 @@ class User < ApplicationRecord
                  .deliver_now
   end
 
-  
+  def self.search(search)
+    where("lower(user.name) LIKE :search", search: "%#{search.downcase}%").uniq
+  end
 
   enum :user_type, [:admin, :user], default: :user
 end
