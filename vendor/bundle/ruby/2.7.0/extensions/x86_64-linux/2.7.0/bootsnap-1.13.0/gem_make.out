@@ -1,0 +1,15 @@
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20220916-21371-z17ksw.rb extconf.rb
+creating Makefile
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.13.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20220916-21371-1w5pev2/bootsnap

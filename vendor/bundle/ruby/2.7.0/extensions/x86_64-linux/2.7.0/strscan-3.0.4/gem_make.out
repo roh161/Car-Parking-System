@@ -1,0 +1,16 @@
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20220916-21371-qlr3j0.rb extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+creating Makefile
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
+make "DESTDIR=" clean
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
+make "DESTDIR="
+compiling strscan.c
+linking shared-object strscan.so
+
+current directory: /home/dell/Documents/Rails_projects/Car_Parking/vendor/bundle/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 strscan.so ./.gem.20220916-21371-g5sau4
