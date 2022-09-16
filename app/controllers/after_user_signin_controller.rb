@@ -1,23 +1,43 @@
 class AfterUserSigninController < ApplicationController
+  
+
   def index
-    if flash[:redirect]=='1'
-      redirect_to root_path
+    if user_signed_in?
+      if current_user.user_type.downcase=='user'
+        @user = User.find_by(params[:user_id])
+        @vehicle = @user.vehicles.all
+        if flash[:redirect]=='1'
+          redirect_to root_path
+        end
+      else
+        redirect_to after_admin_signin_index_path
+      end
     end
-    @user = User.find_by(params[:user_id])
-    @vehicle = @user.vehicles.all
   end
 
   def show
-    @vehicle = current_user.vehicles.find(params[:id])
+    if current_user.user_type.downcase=='user'
+      @vehicle = current_user.vehicles.find(params[:id])  
+    else
+      redirect_to after_admin_signin_index_path
+    end
   end
 
 
   def car_details
-    @vehicle = @user.vehicles.find(params[:id])
+    if current_user.user_type.downcase=='user'
+      @vehicle = @user.vehicles.find(params[:id])
+    else
+      redirect_to after_admin_signin_index_path
+    end
   end
 
   def new
-    @vehicle = current_user.vehicles.new
+    if current_user.user_type.downcase=='user'
+      @vehicle = current_user.vehicles.new
+    else
+      redirect_to after_admin_signin_index_path
+    end
   end
 
   def create
@@ -34,6 +54,7 @@ class AfterUserSigninController < ApplicationController
   end
 
   def update
+    
     @vehicle = current_user.vehicles.find(params[:id])
 
     if @vehicle.update(vehicle_params)
@@ -42,6 +63,7 @@ class AfterUserSigninController < ApplicationController
   end
 
   def destroy
+    
     @vehicle = current_user.vehicles.find(params[:id])
     @vehicle.destroy
     redirect_to after_user_signin_index_path
